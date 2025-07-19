@@ -73,8 +73,8 @@
             />
             <h2 class="features-card-title">Access your files, anywhere</h2>
             <p class="features-card-text">
-              The ability to use a smartphone, tablet, or computer to
-              access your account means your files follow you everywhere.
+              The ability to use a smartphone, tablet, or computer to access
+              your account means your files follow you everywhere.
             </p>
           </div>
           <div class="features-card-container">
@@ -85,9 +85,9 @@
             />
             <h2 class="features-card-title">Security you can trust</h2>
             <p class="features-card-text">
-              2-factor authentication and user-controlled encryption are just
-              a couple of the security features we allow to help secure
-              your files.
+              2-factor authentication and user-controlled encryption are just a
+              couple of the security features we allow to help secure your
+              files.
             </p>
           </div>
           <div class="features-card-container">
@@ -110,10 +110,36 @@
             />
             <h2 class="features-card-title">Store any type of file</h2>
             <p class="features-card-text">
-              Whether you're sharing holidays photos or work documents,
-              Fylo has you covered allowing for all file types to be
-              securely stored and shared.
+              Whether you're sharing holidays photos or work documents, Fylo has
+              you covered allowing for all file types to be securely stored and
+              shared.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour">
+      <div class="main-wrapper">
+        <div class="tour-container">
+          <div class="tour-text">
+            <h1>Stay productive,<br />wherever you are</h1>
+            <p>
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+            <p>
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required.
+            </p>
+            <div class="see-how-fylo-works-btn-container">
+              <a href="#" class="see-how-fylo-works">see-how-fylo-works</a>
+              <img
+                src="./images/icon-arrow.svg"
+                class="arrow-icon"
+                alt="arrrow-icon"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -133,11 +159,13 @@
       font-size: 16px;
       width: 100%;
       height: 100vh;
-      background-color: #1c2230;
+      background-color: #181e2a;
       color: aliceblue;
     }
     body a {
       text-decoration: none;
+      all: unset;
+      cursor: pointer;
     }
     h1 {
       font-size: 2rem;
@@ -145,6 +173,9 @@
     }
     h2 {
       font-weight: 600;
+    }
+    p {
+      color: #cdcdcd;
     }
     .main-wrapper {
       display: flex;
@@ -230,7 +261,7 @@
     }
     .features-container {
       display: grid;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 40px 60px;
       max-width: 900px;
       margin: 0 auto;
@@ -244,6 +275,48 @@
       text-align: center;
       width: 100%;
       height: 100%;
+      gap: 14px;
+    }
+    .features-card-icon {
+      margin-bottom: 16px;
+    }
+
+    .tour-container {
+      position: relative;
+    }
+    .tour-container::before {
+      content: "";
+      display: block;
+      width: 615px;
+      height: 465px;
+      bottom: -50px;
+      left: -150px;
+      position: absolute;
+      background-size: cover;
+      background-image: url(./images/illustration-stay-productive.png);
+    }
+    .tour-text {
+      display: flex;
+      justify-content: flex-start;
+      align-items: baseline;
+      flex-direction: column;
+      text-align: left;
+      padding-left: 540px;
+      gap: 24px;
+      max-width: 1000px;
+      position: relative;
+      z-index: 1;
+    }
+    .see-how-fylo-works-btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px;
+      gap: 8px;
+    }
+    .see-how-fylo-works-btn-container:hover {
+      border-bottom: 1px solid #f2f2f2;
+      cursor: pointer;
     }
   </style>
 </html>
