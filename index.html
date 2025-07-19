@@ -133,12 +133,89 @@
               colleagues for live collaboration. No email attachments required.
             </p>
             <div class="see-how-fylo-works-btn-container">
-              <a href="#" class="see-how-fylo-works">see-how-fylo-works</a>
+              <a href="#" class="see-how-fylo-works">See how Fylo works</a>
               <img
                 src="./images/icon-arrow.svg"
                 class="arrow-icon"
                 alt="arrrow-icon"
               />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="comment">
+      <div class="main-wrapper">
+        <div class="comment-wrapper">
+          <div class="comment-container">
+            <div class="comment-card">
+              <p>
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </p>
+              <div class="comment-card-user">
+                <img
+                  src="./images/profile-1.jpg"
+                  class="profile-img"
+                  alt="profile-img"
+                />
+                <div class="comment-card-user-text">
+                  <div class="comment-card-user-name">
+                    <h3>Satish Patel</h3>
+                  </div>
+                  <div class="comment-card-user-postition">
+                    <h4>Founder & CEO, Huddle</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment-card">
+              <p>
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </p>
+              <div class="comment-card-user">
+                <img
+                  src="./images/profile-2.jpg"
+                  class="profile-img"
+                  alt="profile-img"
+                />
+                <div class="comment-card-user-text">
+                  <div class="comment-card-user-name">
+                    <h3>Bruce McKenzie</h3>
+                  </div>
+                  <div class="comment-card-user-postition">
+                    <h4>Founder & CEO, Huddle</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="comment-card">
+              <p>
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </p>
+              <div class="comment-card-user">
+                <img
+                  src="./images/profile-3.jpg"
+                  class="profile-img"
+                  alt="profile-img"
+                />
+                <div class="comment-card-user-text">
+                  <div class="comment-card-user-name">
+                    <h3>Iva Boyd</h3>
+                  </div>
+                  <div class="comment-card-user-postition">
+                    <h4>Founder & CEO, Huddle</h4>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -174,6 +251,15 @@
     h2 {
       font-weight: 600;
     }
+    h3 {
+      font-size: 0.875rem;
+      line-height: 1.3125rem;
+    }
+    h4 {
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+      color: #cdcdcd;
+    }
     p {
       color: #cdcdcd;
     }
@@ -184,6 +270,7 @@
       width: 100%;
       height: auto;
       padding: 16px;
+      margin-bottom: 200px;
     }
 
     .nav-wrapper {
@@ -317,6 +404,57 @@
     .see-how-fylo-works-btn-container:hover {
       border-bottom: 1px solid #f2f2f2;
       cursor: pointer;
+    }
+
+    .comment-wrapper {
+      position: relative;
+    }
+    .comment-wrapper::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 55px;
+      height: 45px;
+      left: -30px;
+      background-image: url(./images/bg-quotes.png);
+      background-size: cover;
+      z-index: -1;
+      top: -35px;
+    }
+    .comment-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      max-width: 1300px;
+      gap: 48px;
+    }
+    .comment-card {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 24px;
+      padding: 36px 18px 18px 18px;
+      background-color: #21293c;
+      border-radius: 4px;
+      box-shadow: 4px 4px 14px rgba(255, 255, 255, 0.03);
+    }
+    .comment-card-user {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      max-height: 46px;
+      height: 30px;
+      gap: 12px;
+    }
+    .profile-img {
+      display: block;
+      height: 100%;
+      width: auto;
+      border-radius: 50%;
+      object-fit: cover;
     }
   </style>
 </html>
