@@ -221,6 +221,105 @@
         </div>
       </div>
     </section>
+
+    <section class="resource-download">
+      <div class="main-wrapper">
+        <div class="resource-container">
+          <div class="resource-card">
+            <div class="resource-card-text">
+              <h1>Get early access today</h1>
+              <p>
+                It only takes a minute to sign up and our free starter tier is
+                extremely generous. If you have any questions, our support team
+                would be happy to help you.
+              </p>
+            </div>
+            <div class="resource-card-action">
+              <div class="resource-card-action-input">
+                <input
+                  type="email"
+                  class="email-input"
+                  placeholder="Enter your email"
+                  required
+                />
+                <div class="resource-card-action-button">
+                  <a href="#" class="Get-Started-For-Free"
+                    >Get Started For Free</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-container">
+          <img src="./images/logo.svg" class="footer-logo" alt="logo" />
+          <div class="footer-info">
+            <div class="footer-aderss">
+              <img
+                src="./images/icon-location.svg"
+                class="footer-location"
+                alt="location-icon"
+              />
+              <h3>
+                orem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua
+              </h3>
+            </div>
+            <div class="footer-connect">
+              <div class="footer-connect-list">
+                <img
+                  src="./images/icon-phone.svg"
+                  class="phone-icon"
+                  alt="phone-icon"
+                />
+                <h3>+1-543-123-4567</h3>
+              </div>
+              <div class="footer-connect-list">
+                <img
+                  src="./images/icon-email.svg"
+                  class="email-icon"
+                  alt="email-icon"
+                />
+                <h3>example@fylo.com</h3>
+              </div>
+            </div>
+            <div class="footer-about">
+              <ul>
+                <li>About us</li>
+                <li>Jobs</li>
+                <li>Press</li>
+                <li>Blog</li>
+              </ul>
+            </div>
+            <div class="footer-contact">
+              <ul>
+                <li>Contact Us</li>
+                <li>JTerms</li>
+                <li>Privacy</li>
+              </ul>
+            </div>
+            <div class="footer-community">
+              <img
+                src="./images/icon-facebook-normal.svg"
+                class="icon-facebook"
+                alt="icon-facebook"
+              />
+              <img src="./images/icon-x-normal.svg" class="icon-x" alt="icon-x" />
+              <img
+                src="./images/icon-instagram-normal.svg"
+                class="icon-instagram"
+                alt="instagram"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 
   <style>
@@ -238,6 +337,7 @@
       height: 100vh;
       background-color: #181e2a;
       color: aliceblue;
+      z-index: -10;
     }
     body a {
       text-decoration: none;
@@ -247,6 +347,7 @@
     h1 {
       font-size: 2rem;
       line-height: 3rem;
+      padding-bottom: 18px;
     }
     h2 {
       font-weight: 600;
@@ -334,6 +435,9 @@
       height: 48px;
       background-color: #81cad4;
       border-radius: 48px;
+    }
+    .intro-btn:hover {
+      cursor: pointer;
     }
     .intro-started {
       display: flex;
@@ -455,6 +559,129 @@
       width: auto;
       border-radius: 50%;
       object-fit: cover;
+    }
+
+    .resource-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .resource-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+      background-color: #21293c;
+      max-width: 1200px;
+      padding: 48px;
+      gap: 24px;
+      border-radius: 4px;
+      box-shadow: 4px 4px 24px rgba(255, 255, 255, 0);
+    }
+    .resource-card-text {
+      max-width: 600px;
+    }
+    .resource-card-action {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: auto;
+    }
+    .resource-card-action-input {
+      display: flex;
+      gap: 24px;
+      width: 100%;
+      max-width: 700px;
+    }
+    .email-input {
+      all: unset;
+      width: 100%;
+      height: 48px;
+      max-width: 700px;
+      border-radius: 48px;
+      text-decoration: none;
+      background-color: #f2f2f2;
+      color: #323232;
+    }
+    .resource-card-action-button {
+      all: unset;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 48px;
+      background-color: #81cad4;
+      width: 300px;
+    }
+    .resource-card-action-button:hover {
+      cursor: pointer;
+    }
+
+    .footer-wrapper {
+      position: relative;
+      background-color: #0c1524;
+    }
+    .footer-wrapper::before {
+      position: absolute;
+      content: "";
+      height: 500px;
+      width: 100%;
+      background-color: #0c1524;
+      z-index: -1;
+      top: -300px;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      height: 100%;
+      padding: 16px;
+      gap: 36px;
+      margin-bottom: 500px;
+    }
+    .footer-logo {
+      display: block;
+      height: auto;
+      width: 100px;
+    }
+    .footer-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      width: 100%;
+    }
+    .footer-aderss {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      max-width: 300px;
+      height: auto;
+      gap: 16px;
+    }
+    .footer-location {
+      display: flex;
+      width: 24px;
+      height: auto;
+    }
+    .footer-connect-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+    }
+    .footer-about {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .footer-community {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 8px;
     }
   </style>
 </html>
