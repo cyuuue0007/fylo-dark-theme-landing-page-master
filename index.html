@@ -270,37 +270,38 @@
                 eiusmod tempor incididunt ut labore et dolore magna aliqua
               </h3>
             </div>
-            <div class="footer-connect">
-              <div class="footer-connect-list">
-                <img
-                  src="./images/icon-phone.svg"
-                  class="phone-icon"
-                  alt="phone-icon"
-                />
-                <h3>+1-543-123-4567</h3>
-              </div>
-              <div class="footer-connect-list">
-                <img
-                  src="./images/icon-email.svg"
-                  class="email-icon"
-                  alt="email-icon"
-                />
-                <h3>example@fylo.com</h3>
-              </div>
-            </div>
-            <div class="footer-about">
-              <ul>
-                <li>About us</li>
-                <li>Jobs</li>
-                <li>Press</li>
-                <li>Blog</li>
+
+            <div class="footer-links-group">
+              <ul class="footer-connect">
+                <li class="footer-connect-item">
+                  <img
+                    src="./images/icon-phone.svg"
+                    class="phone-icon"
+                    alt="phone-icon"
+                  />
+                  <h3>+1-543-123-4567</h3>
+                </li>
+                <li class="footer-connect-item">
+                  <img
+                    src="./images/icon-email.svg"
+                    class="email-icon"
+                    alt="email-icon"
+                  />
+                  <h3>example@fylo.com</h3>
+                </li>
               </ul>
-            </div>
-            <div class="footer-contact">
-              <ul>
-                <li>Contact Us</li>
-                <li>JTerms</li>
-                <li>Privacy</li>
+
+              <ul class="footer-link-list">
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+
+              <ul class="footer-link-list">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
               </ul>
             </div>
             <div class="footer-community">
@@ -309,7 +310,11 @@
                 class="icon-facebook"
                 alt="icon-facebook"
               />
-              <img src="./images/icon-x-normal.svg" class="icon-x" alt="icon-x" />
+              <img
+                src="./images/icon-x-normal.svg"
+                class="icon-x"
+                alt="icon-x"
+              />
               <img
                 src="./images/icon-instagram-normal.svg"
                 class="icon-instagram"
@@ -335,7 +340,7 @@
       font-size: 16px;
       width: 100%;
       height: 100vh;
-      background-color: #181e2a;
+      background-color: #1c2230;
       color: aliceblue;
       z-index: -10;
     }
@@ -371,7 +376,7 @@
       width: 100%;
       height: auto;
       padding: 16px;
-      margin-bottom: 200px;
+      margin-bottom: 150px;
     }
 
     .nav-wrapper {
@@ -449,6 +454,18 @@
     .features {
       height: 100%;
       width: 100%;
+      position: relative;
+      background-color: #181f2b;
+    }
+    .features::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 449px;
+      top: -440px;
+      background-image: url(./images/bg-curvy-desktop.svg);
+      background-size: cover;
+      z-index: -1;
     }
     .features-container {
       display: grid;
@@ -472,8 +489,12 @@
       margin-bottom: 16px;
     }
 
+    .tour {
+      background-color: #181f2b;
+    }
     .tour-container {
       position: relative;
+      background-color: #181f2b;
     }
     .tour-container::before {
       content: "";
@@ -561,6 +582,18 @@
       object-fit: cover;
     }
 
+    .resource-download {
+      position: relative;
+    }
+    .resource-download::before {
+      position: absolute;
+      content: "";
+      top: -700px;
+      width: 100%;
+      height: 1200px;
+      background-color: #181f2b;
+      z-index: -1;
+    }
     .resource-container {
       display: flex;
       justify-content: center;
@@ -637,9 +670,8 @@
       align-items: flex-start;
       flex-direction: column;
       height: 100%;
-      padding: 16px;
+      padding: 16px 100px;
       gap: 36px;
-      margin-bottom: 500px;
     }
     .footer-logo {
       display: block;
@@ -665,23 +697,43 @@
       width: 24px;
       height: auto;
     }
-    .footer-connect-list {
+    .footer-links-group {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+    .footer-connect {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
       gap: 16px;
     }
-    .footer-about {
+    .footer-connect-item {
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-      gap: 16px;
+      align-items: center;
+      gap: 12px;
+    }
+    .footer-link-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-link-list a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .footer-link-list a:hover {
+      text-decoration: underline;
     }
     .footer-community {
       display: flex;
       justify-content: flex-start;
       align-items: flex-start;
-      gap: 8px;
+      gap: 12px;
     }
   </style>
 </html>
