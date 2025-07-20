@@ -474,14 +474,31 @@
         display: inline;
       }
       .nav-list {
-        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: #1c2230;
         position: absolute;
         top: 70px;
         left: 0;
         right: 0;
-        background-color: #1c2230;
-        padding: 24px 0;
-        text-align: center;
+        z-index: 999;
+        padding: 20px 0;
+
+        /* 滑出動畫用 */
+        transform: translateY(-20px);
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transition: all 0.4s ease;
+      }
+
+      .nav-list.active {
+        transform: translateY(0);
+        opacity: 1;
+        max-height: 500px;
+        pointer-events: auto;
       }
       .nav-list ul {
         flex-direction: column;
