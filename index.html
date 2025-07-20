@@ -408,6 +408,10 @@
       z-index: 999;
       background-color: #1c2230;
       margin-bottom: 150px;
+      transition: box-shadow 0.3s ease;
+    }
+    .nav.shadow {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     .nav-wrapper {
       display: flex;
@@ -922,6 +926,16 @@
     toggleContainer.addEventListener("click", () => {
       toggleContainer.classList.toggle("active");
       navList.classList.toggle("active");
+    });
+  </script>
+  <script>
+    window.addEventListener("scroll", function () {
+      const nav = document.querySelector(".nav");
+      if (window.scrollY > 10) {
+        nav.classList.add("shadow");
+      } else {
+        nav.classList.remove("shadow");
+      }
     });
   </script>
 </html>
