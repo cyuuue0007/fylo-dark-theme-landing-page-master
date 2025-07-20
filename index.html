@@ -821,6 +821,10 @@
     .footer-wrapper {
       position: relative;
       background-color: #0c1524;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
     }
     .footer-wrapper::before {
       position: absolute;
@@ -838,8 +842,11 @@
       flex-direction: column;
       flex-wrap: wrap;
       height: 100%;
-      padding: 16px 100px;
+      width: 100%;
+      padding: 16px 0;
       gap: 36px;
+      max-width: 1080px;
+      margin: 0 80px;
     }
     .footer-logo {
       display: block;
