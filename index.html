@@ -18,11 +18,25 @@
 
   <body>
     <!--選單-->
-    <nav class="nav">
-      <div class="nav-wrapper">
-        <div class="nav-container">
+    <nav class="nav-desktop">
+      <div class="nav-desktop-wrapper">
+        <div class="nav-desktop-container">
           <img src="./images/logo.svg" class="nav-logo" alt="logo" />
-          <div class="nav-list">
+
+          <div class="nav-toggle-container">
+            <img
+              src="./images/icon-hamburger.svg"
+              class="nav-menu-open"
+              alt="menu"
+            />
+            <img
+              src="./images/icon-close.svg"
+              class="nav-menu-close"
+              alt="close"
+            />
+          </div>
+
+          <div class="nav-desktop-list">
             <ul>
               <li>Features</li>
               <li>Team</li>
@@ -369,6 +383,7 @@
     p {
       color: #cdcdcd;
     }
+
     .main-wrapper {
       display: flex;
       justify-content: center;
@@ -379,14 +394,14 @@
       margin-bottom: 150px;
     }
 
-    .nav-wrapper {
+    .nav-desktop-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100%;
       height: 100%;
     }
-    .nav-container {
+    .nav-desktop-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -399,16 +414,67 @@
       max-height: 36px;
       width: auto;
     }
-    .nav-list ul {
+    .nav-desktop-list ul {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 32px;
     }
-    .nav-list li:hover {
+    .nav-desktop-list li:hover {
       cursor: pointer;
       text-decoration: underline;
     }
+    .nav-toggle-container {
+      display: none;
+      background: none;
+      cursor: pointer;
+    }
+
+    /*mobile*/
+    @media (max-width: 768px) {
+      .nav-desktop-container {
+        margin: 0 30px;
+      }
+      .nav-toggle-container {
+        display: block;
+      }
+
+      /* 漢堡圖示預設顯示 */
+      .nav-menu-open {
+        display: inline;
+      }
+
+      /* 關閉圖示預設隱藏 */
+      .nav-menu-close {
+        display: none;
+      }
+
+      /* active狀態時，漢堡隱藏，關閉顯示 */
+      .nav-toggle-container.active .nav-menu-open {
+        display: none;
+      }
+      .nav-toggle-container.active .nav-menu-close {
+        display: inline;
+      }
+      .nav-desktop-list {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: #1c2230;
+        padding: 24px 0;
+        text-align: center;
+      }
+      .nav-desktop-list ul {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .nav-desktop-list.active {
+        display: block;
+      }
+    }
+
     .intro {
       height: 100%;
       width: 100%;
@@ -520,8 +586,8 @@
       padding-left: 540px;
       gap: 24px;
       max-width: 1000px;
-      position: relative;
       z-index: 1;
+      width: 100%;
     }
     .see-how-fylo-works-btn-container {
       display: flex;
@@ -746,11 +812,21 @@
     }
     .icon-x:hover {
       cursor: pointer;
-      content: url(./images/icon-x-hover.svg)
+      content: url(./images/icon-x-hover.svg);
     }
     .icon-instagram:hover {
       cursor: pointer;
       content: url(./images/icon-instagram-hover.svg);
     }
   </style>
+
+  <script>
+    const toggleContainer = document.querySelector(".nav-toggle-container");
+    const navList = document.querySelector(".nav-desktop-list");
+
+    toggleContainer.addEventListener("click", () => {
+      toggleContainer.classList.toggle("active");
+      navList.classList.toggle("active");
+    });
+  </script>
 </html>
